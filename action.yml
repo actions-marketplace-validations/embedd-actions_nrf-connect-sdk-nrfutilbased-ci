@@ -1,0 +1,17 @@
+name: 'NRF Connect SDK'
+description: 'Building nrf connect sdk projects'
+inputs:
+  board:  # id of input
+    description: 'Board for build'
+    required: true
+  build_dir:
+    description: 'Building directory'
+    required: true
+    default: 'build'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - west 
+    - build 
+    - --board nrf52833dk_nrf52833
