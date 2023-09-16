@@ -1,4 +1,4 @@
-name: 'NRF Connect SDK (nrfutil based)'
+name: 'NRF Connect SDK CI action (nrfutil based)'
 description: 'Building nrf connect sdk projects'
 inputs:
   board:  # id of input
