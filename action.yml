@@ -1,4 +1,4 @@
-name: 'NRF Connect SDK'
+name: 'NRF Connect SDK (nrfutil based)'
 description: 'Building nrf connect sdk projects'
 inputs:
   board:  # id of input
@@ -13,5 +13,11 @@ runs:
   image: 'Dockerfile'
   args:
     - west 
-    - build 
-    - --board nrf52833dk_nrf52833
+    - build
+    - --build-dir 
+    - ${{ inputs.build_dir }}
+    - .
+    - --pristine
+    - --no-sysbuild
+    - --board 
+    - ${{ inputs.board }}
